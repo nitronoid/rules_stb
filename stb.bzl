@@ -1,4 +1,4 @@
-def stb_library(name, emit_definition_macro = "", stb_prefix = True, copts = []):
+def stb_library(name, emit_definition_macro = "", stb_prefix = True, copts = [], defines = []):
   definition_name = "{}_definition".format(name)
   header_file_name = "{0}{1}.h".format("stb_" if stb_prefix else "", name)
   src_file_name = "{}_definition.cpp".format(name)
@@ -22,6 +22,7 @@ def stb_library(name, emit_definition_macro = "", stb_prefix = True, copts = [])
       include_prefix = "stb",
       srcs = [src_file_name] if emit_definition_macro else [],
       copts = copts,
+      defines = defines,
       visibility = ["//visibility:public"],
   )
 
