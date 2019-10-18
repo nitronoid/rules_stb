@@ -13,104 +13,85 @@ stb_library(
 )
 
 stb_library(
-    "c_lexer",
-    emit_definition_macro = "STB_C_LEXER_DEFINITION"
-)
-
-stb_library(
-    "connected_components",
-    emit_definition_macro = "STB_CONNECTED_COMPONENTS_DEFINITION"
-)
-
-stb_library(
-   "divide",
-    emit_definition_macro = "STB_DIVIDE_DEFINITION"
-)
-
-stb_library(
-   "ds",
-    emit_definition_macro = "STB_DS_DEFINITION"
-)
-
-stb_library(
-   "dxt",
-    emit_definition_macro = "STB_DXT_DEFINITION"
-)
-
-stb_library(
-   "easy_font",
-    emit_definition_macro = "STB_EASY_FONT_DEFINITION",
+    name = "c_lexer",
+    emit_definition_macro = "STB_C_LEXER_IMPLEMENTATION",
     copts = ["-Wno-unused-function"]
 )
 
 stb_library(
-   "herringbone_wang_tile",
-    emit_definition_macro = "STB_HERRINGBONE_WANG_TILE_DEFINITION"
+    name = "divide",
+    emit_definition_macro = "STB_DIVIDE_IMPLEMENTATION"
 )
 
 stb_library(
-    "image",
-    emit_definition_macro = "STB_IMAGE_DEFINITION"
+    name = "ds",
+    emit_definition_macro = "STB_DS_IMPLEMENTATION"
 )
 
 stb_library(
-    "image_resize",
-    emit_definition_macro = "STB_IMAGE_RESIZE_DEFINITION"
+    name = "dxt",
+    emit_definition_macro = "STB_DXT_IMPLEMENTATION"
 )
 
 stb_library(
-    "image_write",
-    emit_definition_macro = "STB_IMAGE_WRITE_DEFINITION"
+    name = "easy_font",
+    emit_definition_macro = "STB_EASY_FONT_IMPLEMENTATION",
+    copts = ["-Wno-unused-function"]
 )
 
 stb_library(
-    "include",
-    emit_definition_macro = "STB_INCLUDE_DEFINITION"
+    name = "herringbone_wang_tile",
+    emit_definition_macro = "STB_HERRINGBONE_WANG_TILE_IMPLEMENTATION"
 )
 
 stb_library(
-    "leakcheck",
-    emit_definition_macro = "STB_LEAKCHECK_DEFINITION"
+    name = "image",
+    emit_definition_macro = "STB_IMAGE_IMPLEMENTATION"
 )
 
 stb_library(
-    "perlin",
-    emit_definition_macro = "STB_PERLIN_DEFINITION"
+    name = "image_resize",
+    emit_definition_macro = "STB_IMAGE_RESIZE_IMPLEMENTATION"
 )
 
 stb_library(
-    "rect_pack",
-    emit_definition_macro = "STB_RECT_PACK_DEFINITION"
+    name = "image_write",
+    emit_definition_macro = "STB_IMAGE_WRITE_IMPLEMENTATION"
 )
 
 stb_library(
-    "sprintf",
-    emit_definition_macro = "STB_SPRINTF_DEFINITION"
+    name = "include",
+    emit_definition_macro = "STB_INCLUDE_IMPLEMENTATION",
+    copts = ["-Wno-unused-value"]
 )
 
 stb_library(
-    "textedit",
-    emit_definition_macro = "STB_TEXTEDIT_DEFINITION"
+    name = "leakcheck",
+    emit_definition_macro = "STB_LEAKCHECK_IMPLEMENTATION"
 )
 
 stb_library(
-    "tilemap_editor",
-    emit_definition_macro = "STB_TILEMAP_EDITOR_DEFINITION",
-    copts = ["-Wno-comment"]
+    name = "perlin",
+    emit_definition_macro = "STB_PERLIN_IMPLEMENTATION"
 )
 
 stb_library(
-    "truetype",
-    emit_definition_macro = "STB_TRUETYPE_DEFINITION"
+    name = "rect_pack",
+    emit_definition_macro = "STB_RECT_PACK_IMPLEMENTATION"
 )
 
 stb_library(
-    "voxel_render",
-    emit_definition_macro = "STB_VOXEL_RENDER_DEFINITION"
+    name = "sprintf",
+    emit_definition_macro = "STB_SPRINTF_IMPLEMENTATION"
 )
 
 stb_library(
-    "stretchy_buffer",
+    name = "truetype",
+    emit_definition_macro = "STB_TRUETYPE_IMPLEMENTATION"
+)
+
+stb_library(
+    name = "stretchy_buffer",
     stb_prefix = False
 )
 
