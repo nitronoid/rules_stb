@@ -124,11 +124,17 @@ genrule(
     visibility = ["//visibility:private"],
 )
 cc_library(
-    name = "vorbis",
+    name = "vorbis-private",
     hdrs = ["src/stb_vorbis.c"],
     strip_include_prefix = "src",
     include_prefix = "stb",
     srcs = ["stb_vorbis.cpp"],
     copts = ["-Wno-unused-value"],
+    visibility = ["//visibility:private"],
+)
+cc_library(
+    name = "vorbis",
+    deps = ["//:vorbis-private"],
+    defines = ["STB_VORBIS_HEADER_ONLY"],
     visibility = ["//visibility:public"],
 )
