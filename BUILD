@@ -10,6 +10,8 @@ STB_COPTS = [
     "-Wno-unused-parameter",
     "-Wno-maybe-uninitialized",
     "-Wno-type-limits",
+    "-Wno-zero-as-null-pointer-constant",
+    "-Wno-cast-qual",
 ]
 
 stb_library(
