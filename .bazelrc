@@ -1,0 +1,31 @@
+build --symlink_prefix=bazel-build/
+build --cxxopt='-fdiagnostics-color=always'
+
+# Warning flags
+#build --cxxopt='-pedantic'
+build --cxxopt='-Wall'
+build --cxxopt='-Wextra'
+build --cxxopt='-Wshadow'
+build --cxxopt='-Wnon-virtual-dtor'
+build --cxxopt='-Wold-style-cast'
+build --cxxopt='-Wcast-align'
+build --cxxopt='-Wunused'
+build --cxxopt='-Woverloaded-virtual'
+build --cxxopt='-Wconversion'
+build --cxxopt='-Wsign-conversion'
+build --cxxopt='-Wlogical-op'
+build --cxxopt='-Wuseless-cast'
+build --cxxopt='-Wdouble-promotion'
+build --cxxopt='-Wformat=2'
+#build --cxxopt='-Wlifetime'
+
+# Optimisation flags
+build --cxxopt='-Ofast'
+build --cxxopt='-march=native'
+build --cxxopt='-frename-registers'
+build --cxxopt='-funroll-loops'
+build --cxxopt='-fassociative-math'
+build --cxxopt='-ftree-vectorize'
+
+test --test_output=all --test_summary=detailed
+
